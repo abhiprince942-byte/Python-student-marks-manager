@@ -1,2 +1,4 @@
 # Python-student-marks-manager
-print("heyy")
+subjects = ["English", "Maths", "Physics", "Chemistry", "Computer"]
+students = []
+    
