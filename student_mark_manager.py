@@ -26,4 +26,19 @@ def add_student():
     students[roll] = [name, marks]
     roll_numbers.add(roll)
     print("Student added successfully!")
-
+# Function to calculate total
+def calculate_total(marks):
+    total = 0
+    for mark in marks:
+        total = total + mark
+    return total
+# Function to calculate grade
+def calculate_grade(percentage):
+    if percentage >= 80:
+        return "A"
+    elif percentage >= 60:
+        return "B"
+    elif percentage >= 40:
+        return "C"
+    else:
+        return "Fail"
