@@ -42,3 +42,43 @@ def calculate_grade(percentage):
         return "C"
     else:
         return "Fail"
+# Function to display marksheet
+
+def display_marksheet():
+
+    if students == []:
+
+        print("No student records found!")
+
+        return
+
+    print("\n========== CLASS MARKSHEET ==========")
+
+    for student in students:
+
+        roll = student[0]
+
+        name = student[1]
+
+        marks = student[2]
+
+        total = calculate_total(marks)
+
+        percentage = total / 5
+
+        grade = calculate_grade(percentage)
+
+        print("\nRoll Number:", roll)
+
+        print("Name:", name)
+
+        for i in range(5):
+
+            print(subjects[i], ":", marks[i])
+
+        print("Total Marks:", total, "/ 500")
+
+        print("Percentage:", percentage, "%")
+
+        print("Grade:", grade)
+
