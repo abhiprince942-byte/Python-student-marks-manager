@@ -78,7 +78,77 @@ def display_marksheet():
 
         print("Total Marks:", total, "/ 500")
 
-        print("Percentage:", percentage, "%")
+        print("Percentage:",percentage,"%")
 
-        print("Grade:", grade)
+        print("Grade:",grade)
 
+
+     
+ # Function to find class topper
+def class_statistics():
+
+    if students == []:
+        print("No student records found!")
+        return
+
+    highest = -1
+    topper = ""
+    total_percentage = 0
+    count = 0
+
+    subject_total = [0, 0, 0, 0, 0]
+
+    for student in students:
+
+        marks = student[2]
+
+        total = calculate_total(marks)
+        percentage = total / 5
+
+        total_percentage = total_percentage + percentage
+        count = count + 1
+
+        if total > highest:
+            highest = total
+            topper = student[1]
+
+        for i in range(5):
+            subject_total[i] = subject_total[i] + marks[i]
+
+    print("\n========== CLASS STATISTICS ==========")
+
+    print("Class Topper:", topper)
+    print("Topper Marks:", highest)
+    print("Class Average:", total_percentage / count, "%")
+
+    print("\nSubject Wise Average:")
+
+    for i in range(5):
+        print(subjects[i], ":", subject_total[i] / count)
+    
+ 
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+       
