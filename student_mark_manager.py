@@ -1,4 +1,4 @@
-# STUDENT MARKSHEET MANAGER
+# Python-student-marks-manager
 # Group Project
 # Members:
 # Abhishek Kumar
