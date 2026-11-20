@@ -169,3 +169,92 @@ def search_student():
 
         print("Student not found!")
 
+
+
+# Main Menu
+while True:
+
+    print("\n================================")
+    print("    STUDENT MARKSHEET MANAGER")
+    print("================================")
+
+    print("1. Add Student")
+    print("2. Display Marksheet")
+    print("3. Class Statistics")
+    print("4. Search Student")
+    print("5. Exit")
+
+    print("================================")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add_student()
+
+    elif choice == "2":
+        display_marksheet()
+
+    elif choice == "3":
+        class_statistics()
+
+    elif choice == "4":
+        search_student()
+
+    elif choice == "5":
+        print("Thank you!")
+        break
+
+    else:
+        print("Invalid choice!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
