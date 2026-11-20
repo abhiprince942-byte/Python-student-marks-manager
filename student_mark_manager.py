@@ -7,20 +7,21 @@
 # Arpit Yadav
 
 subjects = ("English", "Maths", "Physics", "Chemistry", "Computer")
-students = {}
-roll_numbers = set()
+students = []
 
 # Add Student
 
 def add_student():
     roll = input("Enter Roll Number: ")
-    if roll in roll_numbers:
-        
-        print("Roll number already exists!")
-        
-        return
     name = input("Enter Student Name: ")
+
     marks = []
+    student = [roll, name, marks]
+    for student in students:
+
+        if student[0] == roll:
+            print("Roll number already exists!")
+            return
     for subject in subjects:
         mark = int(input("Enter marks in " + subject + ": "))
         while mark < 0 or mark > 100:
