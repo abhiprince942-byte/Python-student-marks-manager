@@ -9,11 +9,15 @@
 subjects = ("English", "Maths", "Physics", "Chemistry", "Computer")
 students = {}
 roll_numbers = set()
+
 # Add Student
+
 def add_student():
     roll = input("Enter Roll Number: ")
     if roll in roll_numbers:
+        
         print("Roll number already exists!")
+        
         return
     name = input("Enter Student Name: ")
     marks = []
@@ -26,7 +30,10 @@ def add_student():
     students[roll] = [name, marks]
     roll_numbers.add(roll)
     print("Student added successfully!")
+
+
 # Function to calculate total
+
 def calculate_total(marks):
     total = 0
     for mark in marks:
@@ -42,6 +49,8 @@ def calculate_grade(percentage):
         return "C"
     else:
         return "Fail"
+
+
 # Function to display marksheet
 
 def display_marksheet():
