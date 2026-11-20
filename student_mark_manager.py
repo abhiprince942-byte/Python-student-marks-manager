@@ -28,8 +28,7 @@ def add_student():
             print("Enter marks between 0 and 100")
             mark = int(input("Enter marks again: "))
         marks.append(mark)
-    students[roll] = [name, marks]
-    roll_numbers.add(roll)
+    students.append(student)
     print("Student added successfully!")
 
 
