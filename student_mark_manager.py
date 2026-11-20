@@ -125,30 +125,38 @@ def class_statistics():
 
     for i in range(5):
         print(subjects[i], ":", subject_total[i] / count)
-    
- 
-    
 
-    
+# Function to search student
 
+def search_student():
 
+    name = input("Enter student name: ")
 
-    
+    found = False
 
+    for student in students:
 
+        if student[1].lower() == name.lower():
 
+            print("\nStudent Found!")
 
+            print("Roll Number:", student[0])
 
+            print("Name:", student[1])
 
+            total = calculate_total(student[2])
 
+            percentage = total / 5
 
+            print("Total Marks:", total)
 
+            print("Percentage:", percentage, "%")
 
+            print("Grade:", calculate_grade(percentage))
 
+            found = True
 
+    if found == False:
 
+        print("Student not found!")
 
-
-    
-
-       
