@@ -13,21 +13,23 @@ students = []
 
 def add_student():
     roll = input("Enter Roll Number: ")
-    name = input("Enter Student Name: ")
-
-    marks = []
-    student = [roll, name, marks]
+    # Check duplicate roll number
     for student in students:
 
         if student[0] == roll:
             print("Roll number already exists!")
             return
+    name = input("Enter Student Name: ")
+
+    marks = []
+
     for subject in subjects:
         mark = int(input("Enter marks in " + subject + ": "))
         while mark < 0 or mark > 100:
             print("Enter marks between 0 and 100")
             mark = int(input("Enter marks again: "))
         marks.append(mark)
+    student = [roll, name, marks]
     students.append(student)
     print("Student added successfully!")
 
