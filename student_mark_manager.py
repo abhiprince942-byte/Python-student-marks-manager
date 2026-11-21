@@ -143,12 +143,12 @@ def class_statistics():
 
 def search_student():
 
-    name = input("Enter student name: ")
+    roll_no = input("Enter student name: ")
 
     found = False
 
     for student in students:
-        if student[1].lower() == name.lower():
+        if student[0] == roll_no:
 
             print("\nStudent Found!")
 
@@ -167,7 +167,7 @@ def search_student():
             print("Grade:", calculate_grade(percentage))
 
             found = True
-
+            break
     if found == False:
 
         print("Student not found!")
