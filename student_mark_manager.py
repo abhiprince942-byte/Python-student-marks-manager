@@ -6,7 +6,7 @@
 # Suraj Kumar
 # Arpit Yadav
 
-subjects = ("English", "Maths", "Physics", "Chemistry", "Computer")
+subjects = ["English", "Maths", "Physics", "Chemistry", "Computer"]
 students = []
 
 # Add Student
@@ -19,6 +19,7 @@ def add_student():
         if student[0] == roll:
             print("Roll number already exists!")
             return
+            
     name = input("Enter Student Name: ")
 
     marks = []
@@ -26,9 +27,12 @@ def add_student():
     for subject in subjects:
         mark = int(input("Enter marks in " + subject + ": "))
         while mark < 0 or mark > 100:
+            
             print("Enter marks between 0 and 100")
             mark = int(input("Enter marks again: "))
+            
         marks.append(mark)
+        
     student = [roll, name, marks]
     students.append(student)
     print("Student added successfully!")
@@ -92,8 +96,6 @@ def display_marksheet():
         print("Percentage:",percentage,"%")
 
         print("Grade:",grade)
-
-
      
  # Function to find class topper
 def class_statistics():
@@ -146,7 +148,6 @@ def search_student():
     found = False
 
     for student in students:
-
         if student[1].lower() == name.lower():
 
             print("\nStudent Found!")
@@ -205,7 +206,7 @@ while True:
     elif choice == "5":
         print("Thank you!")
         break
-
+        
     else:
         print("Invalid choice!")
 
