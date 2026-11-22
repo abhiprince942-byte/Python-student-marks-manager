@@ -6,7 +6,7 @@
 # Suraj Kumar
 # Arpit Yadav
 
-subjects = ["English", "Maths", "Physics", "Chemistry", "Computer"]
+subjects = ("English", "Maths", "Physics", "Chemistry", "Computer")
 students = []
 
 # Add Student
@@ -143,7 +143,7 @@ def class_statistics():
 
 def search_student():
 
-    roll_no = input("Enter student name: ")
+    roll_no = input("Enter student roll_no.: ")
 
     found = False
 
