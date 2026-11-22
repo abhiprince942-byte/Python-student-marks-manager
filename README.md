@@ -128,7 +128,7 @@ Choose an option from the menu to perform the required operation.
 
 ## Future Improvements
 
-- Store student records permanently using file handling.
+
 - Add options to update and delete student records.
 - Improve the user interface.
 - Add more student performance reports.
